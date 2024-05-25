@@ -1,0 +1,31 @@
+﻿<Page x:Class="ClientApp.SearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1400"
+      Title="SearchPage">
+
+    <Grid Width="1400" Height="800">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Rectangle HorizontalAlignment="Center" Grid.Row="0" Height="80" Width="1400" RenderTransformOrigin="0.476,0.473" Fill="#FF3A1B09"/>
+        <Button Content="Главная" x:Name="mainBut" Grid.Row="0" HorizontalAlignment="Left" Margin="28,0,0,0" VerticalAlignment="Center" Height="60" Width="162" FontSize="22" Background="{x:Null}" Foreground="White" Opacity="0.8" BorderBrush="{x:Null}" />
+        <Button Content="Поиск" x:Name="searchBut"  Grid.Row="0" Margin="190,0,1055,0" VerticalAlignment="Center" Height="60" Width="155" FontSize="22" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=1}"  Grid.Row="0" Margin="682,15,600,22" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left"  Grid.Row="0" Margin="805,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="268" Height="43"/>
+        <Button Content="startSearchBut"  Grid.Row="0" HorizontalAlignment="Left" Margin="1106,15,0,0" VerticalAlignment="Top" Height="47" Width="54"/>
+        <Button Content="addNewEmpl"  Grid.Row="0" HorizontalAlignment="Left" Margin="1307,15,0,0" VerticalAlignment="Top" Height="47" Width="54"/>
+        <GroupBox Header="GroupBox" Grid.Row="1" Margin="10,0,1116,10"/>
+        <DataGrid Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="289,15,15,15" Background="{x:Null}"/>
+
+
+    </Grid>
+</Page>
